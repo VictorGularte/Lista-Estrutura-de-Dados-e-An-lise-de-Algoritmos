@@ -1,0 +1,56 @@
+public class Main {
+
+//questão 1 - a
+
+	public static void inverter(int array[], int primeiraPosicao, int segundaPosicao) {
+		int cont;
+		if (primeiraPosicao < segundaPosicao) {
+			cont = array[primeiraPosicao];
+			array[primeiraPosicao] = array[segundaPosicao];
+			array[segundaPosicao] = cont;
+			inverter(array, primeiraPosicao + 1, segundaPosicao - 1);
+
+		}
+	}
+
+// questão 1 -b
+	public static void main(String[] args) {
+
+		int array[] = { 0, 1, 2, 3, 4, 5 };
+		inverter(array, 0, array.length - 1);
+
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
+
+	}
+
+}
+
+/* questão 2
+
+Essa função recursiva recebe um número e caso ele seja maior que 0 irá resultar em: 2^n.
+
+ questão 3
+ BubbleSort:  é um algoritmo de ordenação que pode ser aplicado em Arrays e Listas dinâmicas. Se o objetivo é ordenar os valores em forma decrescente, então,
+ a posição atual é comparada com a próxima posição e, se a posição atual for maior que a posição posterior, é realizada a troca dos valores nessa posição.
+ Simples de entender e implementar, grande e nao deve ser usado em estruturas complexas.
+
+ 
+ SelectionSort: baseado em se passar sempre o menor valor do vetor para a primeira posição (ou o maior dependendo da ordem requerida), depois o segundo menor
+ valor para a segunda posição e assim sucessivamente, até os últimos dois elementos.
+ Uma vantagem do Selection Sort é que entre os algoritmos de ordenação ele apresenta uma das menores quantidades de movimentos entre os elementos, assim
+ pode haver algum ganho quando se necessita ordenar estruturas complexas.
+ 
+ InsertionSort: método que percorre um vetor de elementos da esquerda para a direita e à medida que avança vai ordenando os elementos à esquerda.
+ Bom método a ser usado quando a sequência esta quase ordenada, ou quando se deseja adicionar poucos itens a uma sequência já ordenada
+ 
+ QuickSort :baseia a ordenação em sucessivas execuções de particionamento, uma rotina que escolhe um pivot e o posiciona no array de uma maneira em que os elementos
+ menores ou iguais ao pivot estão à sua esquerda e os maiores estão à sua direita. Resolve o problema de ordenar um sequência respeitando uma ordem definida.
+ 
+ Questão 4
+ 
+ Método ShellSort
+ 
+ 
+*/
